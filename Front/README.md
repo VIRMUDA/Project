@@ -44,3 +44,12 @@
 - 절대경로 : src
 - src까지는 생략가능
 - 예시 : <code>import { useSomeHook } from 'hooks/useSomeHook';</code>
+
+<br>
+<br>
+
+### Extension
+
+- prettier
+- eslint
+=> 설치 ㄱㄱ
