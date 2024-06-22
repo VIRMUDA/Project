@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'GodoM';
+  font-weight: normal;
+  src: url('GodoM.ttf') format('truetype');
+}
+
 html,
 body,
 div,
@@ -101,7 +107,7 @@ section {
 }
 body {
   min-height: 100vh;
-  font-family: 'PyeongChangPeace';
+  font-family: 'GodoM';
   line-height: 1;
 }
 ol,
