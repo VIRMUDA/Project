@@ -1,0 +1,64 @@
+#인증 방식
+Bearer Token Authentication
+- Authorization 헤더에 토큰을 포함하여 전송  
+- JWT 사용
+
+#프로젝트 세팅값
+Maven project
+jar
+Java-17
+
+#DB
+JPA + MySQL
+
+#Spring Boot Project 구조
+1. src/main/java : Java 코드를 작성하는 폴더
+2. src/main/resources : 어플리케이션의 리소스 파일을 저장하는 폴더
+2.1 static : 정적 파일 저장 폴더
+2.2 application.properties : 어플리케이션의 설정 파일
+3. src/test/java : 테스트 코드(junit)를 저장하는 폴더
+4. target : Maven 빌드 시 결과물이 저장되는 곳
+5. pom.xml : Maven 프로젝트의 설정파일이 저장되는 곳
+
+# application.properties
+src/main/resources
+위 경로에 파일 추가 (static, templates 폴더 있는 위치임)
+(환경변수 들어가서 gitignore에 추가해야됨, DB는 본인 세팅대로 값 변경
+이 파일에 추가되는 내용 있으면 디코에 공유해주기)
+
+# 백엔드 파일 구조
+auth (토큰 값 처리)
+board (게시판)
+chatbot (챗봇)
+config (cors, csrf 등 애플리케이션 외부 설정)
+music (노래 들어갈 곳)
+user (accounts)
+wiki (버튜버 디테일 페이지)
+
+# 기능별 내부 구조
+controller
+dto
+entity
+repository
+service
+
+# 초기 설정 환경
+포스트맨이랑 따로 만든 vite-react로 회원가입, 로그인 기능까지 확인함
+회원가입시 유저 MySQL 저장 확인함
+
+현재 코드에는 회원가입(user/signup)으로 email, username, password 받음
+현재 코드에는 로그인(user/login)으로 email, password 받음
+로그인하면 jwt 토큰 return됨
+
+# 의존성 추가 방법
+최상단 디렉토리 pom.xml
+Maven식으로 추가해야 함
+!의존성 확인 잘하기(새 기능을 추가 했는데 안 되면 의존성 확인부터 ㄱㄱ)
+
+# front와 서버 데이터 보낼 때
+@RequestBody에
+1) form
+2) json
+요청 헤더가 다르다고 함
+잘 모르는 내용이라 나중에 백이나 프론트 중 한 곳만 되면
+관련 내용 찾아보기(데이터 형식이 달라짐)
