@@ -25,6 +25,7 @@ src/main/resources
 위 경로에 파일 추가 (static, templates 폴더 있는 위치임)
 (환경변수 들어가서 gitignore에 추가해야됨, DB는 본인 세팅대로 값 변경
 이 파일에 추가되는 내용 있으면 디코에 공유해주기)
+-> 이거 gitignore에 넣어봤는데 잘 안 됨 왜지?
 
 # 백엔드 파일 구조
 auth (토큰 값 처리)
